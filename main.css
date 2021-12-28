@@ -1,0 +1,729 @@
+/*Header section including the logo and menu*/
+header {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  background-image: linear-gradient(
+    to right top,
+    rgb(184, 182, 182),
+    0.1%,
+    white
+  );
+  padding-bottom: 0.5rem;
+  z-index: 100;
+}
+
+.headerWrapper {
+  margin: 0rem 0.5rem;
+}
+
+#tagLine {
+  color: #6300e4;
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0.3rem;
+  font-variant: small-caps;
+}
+
+#titleBar {
+  /* display: grid; */
+  /* grid-template-columns: 320px 1fr; */
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 0rem;
+}
+
+.companyName {
+  margin: 0.5rem 0rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+}
+
+.companyFirstname {
+  color: white;
+  background: #6300e4;
+  padding: 0rem 0.25rem 0rem 0.5rem;
+  border: 1pt solid #6300e4;
+}
+
+.companyLastname {
+  color: #6300e4;
+  padding: 0rem 0.1rem 0rem 0.25rem;
+  border-left: none;
+}
+
+.companyLastname::after {
+  position: relative;
+  right: 0.5rem;
+  font-family: arial;
+  font-size: 1rem;
+  color: #6300e4;
+  content: " \00a9";
+  vertical-align: super;
+}
+
+#mainMenu {
+  display: flex;
+  justify-content: right;
+  margin: 0.5rem 0rem;
+  gap: 2rem;
+}
+
+#mainMenu > .mainMenuItems {
+  color: gray;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 0rem;
+  margin: auto 0;
+  text-decoration-line: none;
+  transition-duration: 500ms;
+}
+
+#mainMenu > .mainMenuItems:hover {
+  font-weight: 700;
+  color: #6300e4;
+  border-bottom: #6300e4 1pt solid;
+}
+
+#mainMenu > .mainMenuItems:focus {
+  font-weight: 700;
+  color: #6300e4;
+  border-bottom: #6300e4 1pt solid;
+}
+
+/*Dropdown code starts here*/
+
+.dropdown {
+  display: none;
+  /* margin-left: auto; */
+  margin-left: auto;
+}
+
+.dropButton {
+  background-color: white;
+  color: #6300e4;
+  padding: 0rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: auto 0;
+  border: 1pt solid #6300e4;
+  cursor: pointer;
+  transition-duration: 1000ms;
+}
+
+.dropButton:hover,
+.dropButton:focus {
+  color: white;
+  background-color: #6300e4;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 0.5rem;
+  background-color: #f1f1f1;
+  width: 250px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+/* Dropdown code ends here*/
+
+#loginBox {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 0.5rem 0.5rem 1rem;
+  background-color: white;
+  border: solid 1pt gray;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+  position: absolute;
+  bottom: inherit;
+  right: 1rem;
+}
+
+#loginHeader {
+  color: #6300e4;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1pt groove gray;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.textInput {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+  border: none;
+  transition-duration: 500ms;
+}
+
+.textInput:hover {
+  border-bottom: 1pt solid gray;
+}
+
+.textInput:focus {
+  border-bottom: 1pt solid gray;
+}
+
+.submitButton {
+  margin-top: 1rem;
+  padding: 2px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  background-color: #6300e4;
+  color: white;
+  /* border-radius: 5px; */
+  border-radius: 0.25rem;
+  transition-duration: 1000ms;
+}
+
+.submitButton:hover {
+  font-weight: 700;
+  background-color: white;
+  color: #6300e4;
+  border: 1pt solid #6300e4;
+}
+
+.submitButton:focus {
+  font-weight: 700;
+  background-color: white;
+  color: #6300e4;
+  border: 1pt solid #6300e4;
+}
+/*body**********************************/
+
+main {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/image3812.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#banner {
+  padding-top: 5.9rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#banner > p {
+  margin-top: auto;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: lighten;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+#bannerButton {
+  max-width: fit-content;
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  text-decoration-line: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: lighten;
+  transition-duration: 1000ms;
+}
+
+#bannerButton:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#bannerButton:focus {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#offerings {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  background-color: #6300e4;
+  padding: 6.5rem 2rem;
+}
+
+#offerings > h2 {
+  margin: auto;
+}
+
+.productsArea {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* color: white;
+  background-color: #6300e4; */
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 0.5rem;
+  /* min-height: 100%; */
+  background-color: white;
+  color: black;
+  padding: 2em;
+}
+
+.productName {
+  color: #6300e4;
+  background-color: white;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  border-bottom-style: ridge;
+  border-width: thin;
+  border-color: rgb(235, 235, 235);
+  margin-bottom: 0.5rem;
+}
+
+.productSpec {
+  font-size: 0.85rem;
+  letter-spacing: 0.015rem;
+}
+
+.productSpec > li {
+  margin: 0.5rem 0rem;
+}
+
+.differentiators {
+  font-weight: 700;
+  /* color: #6300e4; */
+}
+
+.price {
+  display: block;
+  color: white;
+  background-color: #6300e4;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5em 0em;
+  margin-top: auto;
+  text-decoration-line: none;
+  border-radius: 5px;
+  transition-duration: 1000ms;
+}
+
+.price:hover {
+  color: #6300e4;
+  background-color: white;
+  border: 1pt solid #6300e4;
+}
+
+.price:focus {
+  color: #6300e4;
+  background-color: white;
+  border: 1pt solid #6300e4;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  padding: 6.5rem 5rem;
+}
+
+#aboutHeader {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.uspWrappers {
+  display: flex;
+  flex-direction: column;
+}
+
+.outerCircle {
+  display: flex;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 50%;
+}
+
+.innerCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background-color: #6300e4;
+  border-radius: 50%;
+}
+
+.USP {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.uspSubText {
+  font-weight: 700;
+  color: gray;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+#aboutContent {
+  display: flex;
+  width: 80%;
+  margin: auto auto;
+  flex-direction: column;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+}
+
+#aboutContent > p {
+  padding-bottom: 1rem;
+}
+
+#aboutContent > p::first-letter {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #6300e4;
+}
+
+#contact {
+  display: flex;
+  flex-basis: 1;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 6.5rem 5rem;
+  margin: 0 auto;
+}
+
+.footerCompanyName {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#registeredAddress {
+  margin: 0 auto;
+}
+
+#registeredAddress > p:first-of-type {
+  font-weight: 700;
+  padding: 0.5rem 0rem;
+  color: gray;
+}
+
+#registeredAddress > address {
+  margin-bottom: 1rem;
+}
+
+.phoneNumbers > p:first-of-type {
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #6300e4;
+  color: white;
+  padding: 0rem 0.25rem 0rem 0.5rem;
+  margin: 0.5rem 0rem;
+  border: 1pt solid #6300e4;
+}
+
+.phoneNumbers > p:nth-of-type(2) {
+  margin: 1rem 0;
+}
+
+.phoneNumbers > p:nth-of-type(2) > a {
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  background-color: white;
+  color: #6300e4;
+  text-decoration-line: none;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  margin: 1rem 0rem;
+  border-radius: 0.5rem;
+  transition-duration: 1000ms;
+}
+
+.phoneNumbers > p:nth-of-type(2) > a:hover {
+  background-color: #6300e4;
+  color: white;
+  /* border: 1pt solid #6300e4; */
+}
+
+.seperator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seperatorLine {
+  width: 0.2rem;
+  height: 9.2rem;
+  background-color: rgb(238, 238, 238);
+  border-radius: 50%;
+}
+
+.seperatorOr {
+  margin: 0.5rem;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(151, 151, 151);
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0.5rem 0rem;
+}
+
+#contactForm > p {
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #6300e4;
+  color: white;
+  padding: 0rem 0.25rem 0rem 0.5rem;
+  border: 1pt solid #6300e4;
+}
+
+#messageBox {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+  border: none;
+  transition-duration: 500ms;
+}
+
+#messageBox:hover {
+  border: 1pt solid gray;
+}
+
+#messageBox:focus {
+  border: 1pt solid gray;
+}
+
+@media (max-width: 1294px) {
+  #offerings {
+    padding: 3.5rem 2rem;
+  }
+}
+
+@media (max-width: 1190px) {
+  #banner > p {
+    font-size: 2.5rem;
+  }
+  #bannerButton {
+    font-size: 4rem;
+    padding: 0rem 0.8rem;
+  }
+  #aboutContent {
+    width: 85%;
+  }
+}
+
+@media (max-width: 890px) {
+  #banner > p {
+    font-size: 1.5rem;
+  }
+  #bannerButton {
+    font-size: 3rem;
+    padding: 0rem 0.6rem;
+  }
+
+  #about {
+    padding: 6.5rem 3rem;
+  }
+
+  #aboutContent {
+    width: 90%;
+  }
+
+  #contact {
+    padding: 6.5rem 3rem;
+  }
+}
+
+@media (max-width: 780px) {
+  #tagLine {
+    line-height: 1.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  #titleBar {
+    padding: 0.25rem 0rem;
+  }
+
+  .companyName {
+    margin: 0.25rem 0rem;
+  }
+
+  #mainMenu {
+    margin: 0.25rem 0rem;
+    gap: 1rem;
+  }
+
+  .outerCircle {
+    width: 125px;
+    height: 125px;
+  }
+
+  .innerCircle {
+    width: 116.66px;
+    height: 116.66px;
+  }
+
+  .USP {
+    font-size: 1.08rem;
+    letter-spacing: 0.083rem;
+  }
+
+  .uspSubText {
+    padding-top: 0.4166rem;
+  }
+
+  .seperatorLine {
+    display: none;
+  }
+
+  #about {
+    padding: 6.5rem 2rem;
+  }
+
+  #aboutContent {
+    width: 95%;
+  }
+
+  #contact {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6.5rem 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #tagLine {
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  #titleBar {
+    padding: 0.125rem 0rem;
+  }
+
+  .companyName {
+    margin: 0.125rem 0rem;
+  }
+
+  #mainMenu {
+    margin: 0.125rem 0rem;
+    gap: 0.5rem;
+  }
+
+  .outerCircle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .innerCircle {
+    width: 93.328px;
+    height: 93.328px;
+  }
+
+  .USP {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .uspSubText {
+    padding-top: 0.3888rem;
+    font-size: 0.8rem;
+  }
+
+  #about {
+    padding: 4.5rem 1rem;
+  }
+
+  #aboutHeader {
+    width: 100%;
+  }
+
+  #aboutContent > p {
+    font-size: 0.85rem;
+    letter-spacing: 0.085rem;
+  }
+
+  #contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 4.5rem 1rem;
+  }
+}
+
+@media (max-width: 665px) {
+  #tagLine {
+    font: 0.8rem;
+    text-align: left;
+  }
+
+  .companyName {
+    font-size: 0.8rem;
+  }
+
+  #mainMenu {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex;
+  }
+  .footerCompanyName {
+    font-size: 1.5rem;
+  }
+}

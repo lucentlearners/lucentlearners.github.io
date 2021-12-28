@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="charset" content="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>Lucent Learners</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="main.css" />
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>     -->
+</head>
+<body>
+    <header>
+        <div class="headerWrapper">
+            <div id="tagLine"><p>Laying the foundation for excellence</p></div>
+            <div id="titleBar">
+                <div class="companyName"><h1><span class="companyFirstname">Lucent</span><span class="companyLastname">Learners</span></h1></div>
+                <menu id="mainMenu">
+                    <a class="mainMenuItems" href="#">Home</a>
+                    <a class="mainMenuItems" href="#about">About</a>
+                    <a class="mainMenuItems" href="#offerings">Offerings</a>
+                    <a class="mainMenuItems" href="#contact">Contact</a>
+                    <a class="mainMenuItems" href="#">Log In</a>
+                </menu>
+                <div class="dropdown">
+                    <button onclick="showSubmenu()" class="dropButton">&Congruent;</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#">Home</a>
+                      <a href="#about">About</a>
+                      <a href="#offerings">Offerings</a>
+                      <a href="#contact">Contact</a>
+                      <a href="#">Log In</a>
+                    </div>
+                </div>
+                <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function showSubmenu() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropButton')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
+            </div>
+            <div id="loginBox">
+                <h2 id="loginHeader">Login</h2>
+                <form id="loginForm" action="login.php" method="post" target="_blank">
+                    <input class="textInput" name="userID" type="text" placeholder="Email ID" required>
+                    <input class="textInput" name="password" type="password" placeholder="Password" required>
+                    <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+                    <input class="submitButton" name="submit" type="submit">
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <div id="banner">
+            <p>Try our courses for free and see how it helps with your understanding of the subject.</p>
+            <a id="bannerButton" href="#">Register now!</a>
+        </div>
+
+        <div id="about">
+            <div id="aboutHeader">
+                <div class="uspWrappers"><div class="outerCircle"><div class="innerCircle"><p class="USP">Quality</p></div></div><p class="uspSubText">In content & delivery</p></div>
+                <div class="uspWrappers"><div class="outerCircle"><div class="innerCircle"><p class="USP">Affordability</p></div></div><p class="uspSubText">In pricing</p></div>
+                <div class="uspWrappers"><div class="outerCircle"><div class="innerCircle"><p class="USP">Availability</p></div></div><p class="uspSubText">Anytime, anywhere</p></div>
+            </div>
+            <div id="aboutContent">
+                <p>At <strong>Lucent Learners</strong> we believe that quality education should be available to every child at an affordable price.</p>
+
+                <p>We recognize that every child is unique – each having different levels of interest in different subjects - being at different stages of learning according to their areas of interest and learning abilities.</p>
+
+                <p>Hence, it becomes our responsibility as mentors to provide a system that shapes itself to suit their learning patterns. Our unique <strong>assisted study</strong> system encourages the child to achieve mastery on what they are good at, while supporting them to grasp the concepts they find difficult to handle.</p>
+
+                <p>To further support the child in his/her studies, we offer <strong>weekly webiners</strong> to clarify their doubts. If the child is unable to participate for any reason, he/she can view the recordings afterwards.</p>
+
+                <p>Children who learn better through live interactions can speak to <strong>qualified mentors</strong> on weekdays and get their doubts clarified.</p>
+
+                <p>To learn more about our different offerings visit our <strong>Offerings</strong> page. You can also <strong>register free</strong> for  a first-hand feel of some of our contents.</p>
+            </div>
+        </div>
+
+        <div id="offerings">
+            <h2>Our Offerings</h2>
+            <div class="productsArea">
+                <div class="products">
+                    <h3  class="productName">Free</h3>
+                    <ul class="productSpec">
+                        <li>Access to online contents</li>
+                        <li class="differentiators">1 MCQ practice session per chapter</li>
+                        <li class="differentiators">1 test paper per chapter</li>
+                        <li class="differentiators">Progress report sharing on mail</li>
+                        <li class="differentiators">Solution paper sharing on mail</li>
+                    </ul>
+                    <a class="price" href="#offerings">INR 0.00 / mo</a>
+                </div>
+
+                <div class="products">
+                    <h3 class="productName">Test Package</h3>
+                    <ul class="productSpec">
+                        <li>Access to online contents</li>
+                        <li class="differentiators">3 MCQ tests per chapter</li>
+                        <li class="differentiators">2 chapter tests per chapter</li>
+                        <li class="differentiators">1 monthly MCQ test (multiple chapters)</li>
+                        <li class="differentiators">1 monthly test (multiple chapters)</li>
+                        <li class="differentiators">5 annual tests (*Annual Subscription only)</li>
+                        <li>Progress report sharing on mail</li>
+                        <li>Solution paper sharing on mail</li>
+                    </ul>
+                    <a class="price" href="#offerings">INR 199.00 / mo</a>
+                </div>
+
+                <div class="products">
+                    <h3 class="productName">Self Study</h3>
+                    <ul class="productSpec">
+                        <li>Access to online contents</li>
+                        <li class="differentiators">Access to system assisted study</li>
+                        <li class="differentiators">Unlimited MCQ practice sessions per chapter</li>
+                        <li>3 MCQ tests per chapter</li>
+                        <li>2 chapter tests</li>
+                        <li>1 monthly MCQ test (cumulative)</li>
+                        <li>1 monthly test (cumulative)</li>
+                        <li>Progress report sharing on mail</li>
+                        <li>Solution paper sharing on mail</li>
+                        <li class="differentiators">Access to webiners (optional)</li>
+                    </ul>
+                    <a class="price" href="#offerings">INR 499.00 / mo</a>
+                </div>
+
+                <div class="products">
+                    <h3 class="productName">Comprehensive</h3>
+                    <ul class="productSpec">
+                        <li>Access to online contents</li>
+                        <li>Access to system assisted study</li>
+                        <li class="differentiators">Access to mentor on weekdays (10am - 6pm IST)</li>
+                        <li>Unlimited MCQ practice sessions per chapter</li>
+                        <li>3 MCQ tests per chapter</li>
+                        <li>2 chapter tests</li>
+                        <li>1 monthly MCQ test (cumulative) </li>
+                        <li>1 monthly test (cumulative)</li>
+                        <li>Progress report sharing on mail</li>
+                        <li>Solution paper sharing on mail</li>
+                        <li class="differentiators">Access to webiners</li>
+                    </ul>
+                    <a class="price" href="#offerings">INR 1999.00 / mo</a>  
+                </div>
+            </div>
+        </div>
+
+        
+    <footer>
+        <div id="contact">
+            <div id="registeredAddress">
+                <div class="companyName footerCompanyName"><p><span class="companyFirstname">Lucent</span><span class="companyLastname">Learners</span></p></div>
+                <p>Registered Office</p>
+                <address>
+                    <p>16 South Road<br>3rd Floor<br>Kolkata 700075</p>
+                </address>
+                <div class=phoneNumbers>
+                    <p>Call us on...</p>
+                    <p><a href="tel:+919903333131">+91 99033 33131</a> </p>
+                </div>
+            </div>
+            <div class="seperator"><div class="seperatorLine"></div><p class=seperatorOr>Or</p><div class="seperatorLine"></div></div>
+            <!-- <div id="contactForm"> -->
+                <form id="contactForm" action="mailToLucent.php" method="post">
+                    <p>Write to us...</p>
+                    <input class="textInput" name="name" type="text" placeholder="Your name" required>
+                    <input class="textInput" name="emailID" type="email" placeholder="Your email ID" required>
+                    <input class="textInput" name="telNo" type="tel" placeholder="Your contact number" required>
+                    <textarea name="message" id="messageBox" cols="35" rows="5" placeholder="Type your message here." required></textarea>
+                    <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+                    <input class="submitButton" type="submit" >
+                    
+                </form>
+            <!-- </div> -->
+        </div>
+    </main>
+    </footer>
+</body>
+</html>
