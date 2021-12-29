@@ -21,7 +21,8 @@
                     <a class="mainMenuItems" href="#about">About</a>
                     <a class="mainMenuItems" href="#offerings">Offerings</a>
                     <a class="mainMenuItems" href="#contact">Contact</a>
-                    <a class="mainMenuItems" href="#">Log In</a>
+                    <!-- <a class="mainMenuItems" href="#" onclick="showLoginBox()">Log In</a> -->
+                    <p class="mainMenuItems" onclick="showLoginBox()">Log In</p>
                 </menu>
                 <div class="dropdown">
                     <button onclick="showSubmenu()" class="dropButton">&Congruent;</button>
@@ -30,32 +31,14 @@
                       <a href="#about">About</a>
                       <a href="#offerings">Offerings</a>
                       <a href="#contact">Contact</a>
-                      <a href="#">Log In</a>
+                      <!-- <a href="#" onclick="showLoginBox()">Log In</a> -->
+                      <p onclick="showLoginBox()">Log In</p>
                     </div>
                 </div>
-                <script>
-                    /* When the user clicks on the button, 
-                    toggle between hiding and showing the dropdown content */
-                    function showSubmenu() {
-                      document.getElementById("myDropdown").classList.toggle("show");
-                    }
-                    
-                    // Close the dropdown if the user clicks outside of it
-                    window.onclick = function(event) {
-                      if (!event.target.matches('.dropButton')) {
-                        var dropdowns = document.getElementsByClassName("dropdown-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                          var openDropdown = dropdowns[i];
-                          if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                          }
-                        }
-                      }
-                    }
-                    </script>
+                
             </div>
-            <div id="loginBox">
+            <div class="loginBox">
+                <div id="closeBox" onclick="hideLoginBox()"><p>X</p></div>
                 <h2 id="loginHeader">Login</h2>
                 <form id="loginForm" action="login.php" method="post" target="_blank">
                     <input class="textInput" name="userID" type="text" placeholder="Email ID" required>
@@ -64,6 +47,37 @@
                     <input class="submitButton" name="submit" type="submit">
                 </form>
             </div>
+            <script>
+                /* When the user clicks on the dropdown menu button, 
+                toggle between hiding and showing the dropdown content */
+                function showSubmenu() {
+                  document.getElementById("myDropdown").classList.toggle("showDropdown");
+                }
+
+                /* When the user clicks on the login button, 
+                toggle between hiding and showing the loginBox */
+                function showLoginBox() {
+                  document.getElementsByClassName("loginBox")[0].classList.toggle("showLogin");
+                }
+
+                function hideLoginBox() {
+                    document.getElementsByClassName("loginBox")[0].classList.toggle("showLogin");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropButton')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('showDropdown')) {
+                        openDropdown.classList.remove('showDropdown');
+                      }
+                    }
+                  }                  
+                }
+            </script>
         </div>
     </header>
     <main>
